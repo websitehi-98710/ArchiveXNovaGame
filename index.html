@@ -3,71 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="AXN"/>
-  <title>A</title>
+  <meta name="description" content="ArchiveXNova"/>
+  <title>ArchiveXNova</title>
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a0a0a, #1a1200, #2a1a00);
-      color: #ffd700;
+      background: linear-gradient(135deg, #0f1b2e, #1e2a44, #2c3e5a);
+      color: #f0f8ff;
       min-height: 100vh;
       padding: 20px 15px;
-      line-height: 1.5;
+      line-height: 1.6;
       background-attachment: fixed;
     }
 
-    .container { max-width: 1280px; margin: 0 auto; }
+    .container { 
+      max-width: 1280px; 
+      margin: 0 auto; 
+    }
 
     header { 
       text-align: center; 
       margin-bottom: 3.5rem; 
-      padding: 2rem 0; 
-      position: relative;
+      padding: 2.5rem 0; 
     }
 
     h1 {
       font-size: 3.9rem;
       font-weight: 900;
-      background: linear-gradient(90deg, #f7d358, #ffd700, #ffeb3b, #ffd700, #f7d358);
+      background: linear-gradient(90deg, #e0f0ff, #f0f8ff, #c0e0ff, #f0f8ff, #e0f0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 200% 100%;
-      animation: goldShimmer 4s linear infinite;
+      animation: snowShimmer 5s linear infinite;
       text-shadow: 
-        0 0 15px #ffd70090,
-        0 0 30px #ffeb3b70,
-        0 0 50px #f7d35850;
+        0 0 20px #c0e0ff,
+        0 0 40px #a0d0ff;
       letter-spacing: 2px;
     }
 
-    @keyframes goldShimmer {
+    @keyframes snowShimmer {
       0% { background-position: 0% 50%; }
       100% { background-position: 200% 50%; }
     }
 
     .subtitle { 
       font-size: 1.55rem; 
-      color: #e8c670; 
+      color: #b0d0ff; 
       margin-top: 0.6rem; 
-      text-shadow: 0 0 10px #ffd70060;
+      text-shadow: 0 0 10px #c0e0ff60;
       letter-spacing: 1px;
       font-weight: 500;
     }
 
     .category {
-      background: linear-gradient(145deg, rgba(40, 30, 0, 0.8), rgba(80, 50, 0, 0.7));
+      background: linear-gradient(145deg, rgba(30, 45, 70, 0.85), rgba(45, 65, 95, 0.75));
       border-radius: 20px;
       padding: 2.2rem 2.4rem;
       margin-bottom: 3rem;
       backdrop-filter: blur(12px);
-      border: 2px solid #d4af37;
+      border: 2px solid #a0c0ff;
       box-shadow: 
-        0 12px 45px rgba(0,0,0,0.75),
-        inset 0 0 30px rgba(255,215,0,0.15),
-        0 0 35px rgba(212,175,55,0.3);
+        0 12px 45px rgba(0,0,0,0.6),
+        inset 0 0 30px rgba(192, 224, 255, 0.15);
       position: relative;
       overflow: hidden;
     }
@@ -79,32 +83,32 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle at 30% 20%, rgba(255,215,0,0.22) 0%, transparent 65%);
+      background: radial-gradient(circle at 30% 20%, rgba(192, 224, 255, 0.25) 0%, transparent 65%);
       pointer-events: none;
-      animation: goldPulse 14s ease-in-out infinite;
+      animation: snowPulse 16s ease-in-out infinite;
     }
 
-    @keyframes goldPulse {
-      0%, 100% { opacity: 0.45; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.18); }
+    @keyframes snowPulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.12); }
     }
 
     .category h2 {
       font-size: 2.65rem;
-      color: #ffeb3b;
+      color: #e0f0ff;
       margin-bottom: 1.8rem;
-      border-bottom: 4px solid #d4af37;
+      border-bottom: 4px solid #a0c0ff;
       padding-bottom: 1rem;
       text-align: left;
-      text-shadow: 0 0 18px #ffd70090;
-      background: linear-gradient(90deg, #ffd700, #ffeb3b, #ffd700);
+      text-shadow: 0 0 15px #c0e0ff90;
+      background: linear-gradient(90deg, #c0e0ff, #f0f8ff, #c0e0ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-size: 180% 100%;
-      animation: goldTextFlow 6s linear infinite;
+      animation: snowTextFlow 7s linear infinite;
     }
 
-    @keyframes goldTextFlow {
+    @keyframes snowTextFlow {
       0% { background-position: 0% 50%; }
       100% { background-position: 180% 50%; }
     }
@@ -117,63 +121,40 @@
     }
 
     .game-item {
-      background: linear-gradient(135deg, rgba(50, 40, 10, 0.85), rgba(90, 60, 10, 0.7));
+      background: linear-gradient(135deg, rgba(40, 55, 85, 0.9), rgba(55, 75, 110, 0.8));
       padding: 1.4rem 1.7rem;
       border-radius: 14px;
-      border: 1.5px solid #c9a347;
+      border: 1.5px solid #8ab4ff;
       transition: all 0.35s ease;
       font-size: 1.12rem;
-      color: #fff9e6;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.65);
+      color: #f0f8ff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.55);
       position: relative;
       overflow: hidden;
     }
 
-    .game-item::after {
-      content: '';
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(transparent, rgba(255,215,0,0.3), transparent);
-      transition: all 0.65s ease;
-      pointer-events: none;
-    }
-
     .game-item:hover {
-      transform: translateY(-10px) scale(1.03);
-      border-color: #ffeb3b;
+      transform: translateY(-8px) scale(1.03);
+      border-color: #c0e0ff;
       box-shadow: 
-        0 25px 60px rgba(212,175,55,0.45),
-        inset 0 0 35px rgba(255,215,0,0.25);
+        0 20px 50px rgba(160, 192, 255, 0.35),
+        inset 0 0 25px rgba(192, 224, 255, 0.2);
       color: #ffffff;
-    }
-
-    .game-item:hover::after {
-      top: 100%;
-    }
-
-    .highlight { 
-      color: #fff176; 
-      font-weight: 700; 
-      text-shadow: 0 0 14px #ffd700aa;
     }
 
     .emoji { 
       margin-right: 0.7rem; 
       font-size: 1.45rem; 
-      filter: drop-shadow(0 0 8px #ffd70090);
     }
 
     footer {
       text-align: center;
       margin-top: 5.5rem;
       padding: 2.5rem 0;
-      color: #e8c670;
+      color: #b0d0ff;
       font-size: 1.15rem;
-      border-top: 2px solid #d4af37;
-      text-shadow: 0 0 12px #ffd70070;
+      border-top: 2px solid #8ab4ff;
+      text-shadow: 0 0 10px #c0e0ff70;
       letter-spacing: 1.2px;
     }
 
@@ -354,6 +335,7 @@
         "$15,000 Glass Bridge (Squid Game Obby)","$45,600 Jump Rope!","Brookhaven RP","99 Nights in the Forest Glass Bridge",
         "RUNAWAY JUMP ROPE","Hamood Habibi Tower","Cross Invisible Path to MAGIC CARPET!","Color Block Run","1% Win Obby",
         "IMPOSSIBLE Brainrot Glass Bridge","Troll Invisible Tower [CHEAP ADMIN]","Teamwork Tower 2","Obby But You Get TROLLED!",
+      ]
     };
 
     function renderAllCategories() {
@@ -377,15 +359,10 @@
 
           let content = game.trim();
 
-          // Emoji detection
+          // Emoji detection (jika ada)
           const emojiMatch = content.match(/^([\u{1F300}-\u{1F5FF}\u{1F600}-\u{1F64F}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}])/u);
           if (emojiMatch) {
             content = `<span class="emoji">${emojiMatch[0]}</span> ${content.slice(emojiMatch[0].length).trim()}`;
-          }
-
-          // Highlight untuk game yang berhubungan dengan speed, update, troll, dll
-          if (/(\+1 |\[UPD\]|\[ABILITIES\]|Speed|TROLL|Brainrot|Tsunami|Lava|Escape)/i.test(content)) {
-            content = `<span class="highlight">${content}</span>`;
           }
 
           li.innerHTML = content;
@@ -397,7 +374,7 @@
       });
     }
 
-    // Render semua kategori saat halaman dimuat
+    // Render saat halaman dimuat
     renderAllCategories();
   </script>
 
